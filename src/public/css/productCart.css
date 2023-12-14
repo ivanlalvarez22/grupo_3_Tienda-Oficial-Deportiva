@@ -44,20 +44,57 @@ main {
   width: 80%;
 }
 
+.products{
+  display: flex;
+  width: 60%;
+  margin: 10px;
+  padding: 10px;
+  border: var(--bg-primario) solid 2px;
+}
+
 .productDescription {
   display: flex;
   flex-direction: column;
-
+  margin: 10px;
+  padding: 30px;
+  align-items: center;
+  text-align: justify;
+  width: 200px;
   }
 
 .quantity {
   display: flex;
   flex-direction: column;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.delete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
 
 .calculations {
   display: flex;
   flex-direction: column;
+  width: 40%;
+  margin: 20px;
+  border: var(--bg-primario) solid 2px;
+  padding: 20px;
+  justify-content: space-around;
+        
 }
 
 @media (max-width: 768px) {
