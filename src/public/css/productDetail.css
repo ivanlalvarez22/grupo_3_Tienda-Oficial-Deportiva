@@ -27,11 +27,11 @@
 
 .boton {
     width: 90px;
-    height: 30px;
+    height: auto;
     margin: 0 auto;
     text-align: center;
     padding: 2px;
-    display: flex;
+    display: block;
     font-size: 100%;
     color: var(--secundario);
     background-color: var(--primario);
@@ -48,10 +48,10 @@
 
 main {
     display: flex;
-    width: 90vw;
-    margin: 15px auto;
+    width: 98%;
+    margin: 5px auto;
     border: 15px;
-    background-color: var(--primario);
+    background-color: black;
     height: max-content 450px;
 
 }
@@ -62,49 +62,61 @@ main {
     text-align: center;
 }
 
-.foto {
-    padding: 15px;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-}
 
 .contenedorGris {
     background-color: var(--links);
-    margin: 15px;
-    height: 400%;
-    width: 90%;
+    margin: 5px auto;
+    padding: 10px;
+    height: auto;
+    width: 98%;
+    display: block;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.DPS {
+.product-detail-img {
+    padding: 15px;
+    height: auto;
+    display: Block;
+    align-items: center;
+    justify-content: center;
     background-color: #eeeeee;
-    width: 98%;
-    height: 40%;
-    margin: 5px auto;
+    border: solid 5px red;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.product-detail {
+    background-color: #eeeeee;
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
     text-align: center;
     align-items: center;
     justify-content: center;
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-
+    display: block;
+    padding: 10px;
+    border: solid 5px #ffffff 
 }
 
-.DPA {
-    background-color: var(--secundario);
-    width: 98%;
-    margin: 5px auto;
-    height: 30%;
-    padding: 15px;
-    text-align: justify;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+ul {
+    display: block;
 }
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fa-credit-card {
+    color: green;
+}
+
+.fa-store {
+    color: green; 
+}
+
 
 .botones {
     background-color: var(--links);
@@ -119,14 +131,23 @@ main {
 
 
 @media (max-width: 768px) {
-    .granContenedor {
+    .contenedorGris {
         display: flex;
         flex-direction: column;
     }
 }
 
 @media (min-width:1280px) {
-.granContenedor{
+    .contenedorGris {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .botones {
     display: flex;
-}
+    align-items: center;
+    justify-content: center; 
+    }
+
 }
