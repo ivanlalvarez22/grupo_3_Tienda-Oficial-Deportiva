@@ -16,17 +16,18 @@
         </ul>
 
         <div class="container">
+          
           <div class="products">
             <article class="productImage">
-              <img src="/img/img-mistery.jpg" alt="product image" width="200px" height="200px">
+              <img src="/img/products/<%= pSelected.image%>" alt="product image" width="200px" height="200px">
+         
             </article>
 
             <section class="productDescription">
-              <h3>Producto Misterioso</h3>
-              <p>Caja misteriosa con elementos de origen Argentino. Cada caja contiene 10 productos, amplia
-              variedad de categorías.</p>
+              <h3><%= pSelected.name%></h3>
+              <p><%= pSelected.description %></p>
             </section>
-            
+                                              
             <section class="quantity">
               <form id="quantity" method="post">
                 <h3><label for="cantidad">Cantidad:</label></h3>
@@ -44,12 +45,17 @@
                 </select>
               </form> 
             </section>
-
+                    
             <section class="price">
               <h3>Precio</h3>
-              <h4>$6.770</h4>
+              <h4>$<%= pSelected.price %></h4>
+                <% if (pSelected.discount > 0 ){ %> 
+                    <span><%= pSelected.discount %> % OFF</span>
+                <%}else { %>
+                <span> 0 % OFF </span>
+              <% } %>
             </section>
-            
+
             <section class="delete">
               <i class="fa-solid fa-trash-can"></i>
               <button type="reset">Eliminar</button>
@@ -58,7 +64,7 @@
           <div class="calculations">
 
             <h4>Subtotal</h4>
-            <div class="formulario">
+            <!--<div class="formulario">
               <h4>Código de descuento y código postal</h4>
               <form id="formularioEnvio">
                 <label for="codigoDescuento">Código de Descuento:</label>
@@ -69,13 +75,17 @@
                 <input type="text" id="codigoPostal" name="codigoPostal">
 
                 <button type="button" onclick="calcularCostoEnvio()">Calcular Costo de Envío</button>
-              </form>
+              </form>-->
+              
+              
               <h3>Total</h3>
-
+              <p class="totalPrice">
+              </span> Precio Total$<span= "precioTotal">
+                <%= pSelected.price %></span></p>
             </div>
 
             <button onclick="realizarCompra()">Comprar</button>
-
+            
           </div>
         </div>
       </main>

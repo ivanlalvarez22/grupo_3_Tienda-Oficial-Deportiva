@@ -86,8 +86,10 @@ const controller = {
 
   getCart: (req, res) => {
     // Lógica del controlador para la página de inicio
-    res.render('products/productCart'); // Renderiza la plantilla 'productCart.ejs' en la carpeta 'views'
-  },
+	const pSelected = products.find(product => product.id == req.params.id)
+		console.log(pSelected)
+		res.render('products/productCart.ejs', {pSelected}); // Renderiza la plantilla 'productCart.ejs' en la carpeta 'views'
+     },
 
 
 };
